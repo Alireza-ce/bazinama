@@ -1,0 +1,21 @@
+@import "variables/colors";
+@import "variables/marginPadding";
+@import "mixin/font";
+
+@mixin input() {
+  border: none;
+  @include regular;
+  background: inherit;
+  border-bottom: 2px solid $yellow;
+  outline: none;
+}
+
+@mixin form {
+  display: flex;
+  flex-direction: column;
+  padding: $basePadding;
+  min-width: 400px;
+  @media screen and (max-width: $screen-mobile) {
+    min-width: 100%;
+  }
+}

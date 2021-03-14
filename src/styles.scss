@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Shabnam";
+  src: url("assets/fonts/Shabnam.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  direction: rtl;
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(#231f43, #03060f);
+  font-family: "Shabnam";
+}

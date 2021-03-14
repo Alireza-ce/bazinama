@@ -1,0 +1,48 @@
+@import "variables/colors";
+@import "variables/border";
+@import "variables/marginPadding";
+@import "mixin/font";
+
+.comment {
+  background: $tabContentBackground;
+  padding: $basePadding;
+  margin: 0px $mediumMargin;
+  border-radius: $smallRadius;
+}
+
+.userInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.userImage {
+  display: flex;
+}
+
+.userName {
+  margin-right: $baseMargin;
+  @include regular;
+  color: $faqTextColor;
+  margin-top: $smallMargin;
+}
+
+.userAvatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.message {
+  margin: $baseMargin $mediumMargin;
+  @include regular;
+  color: $faqTextColor;
+}
+
+.fa-star {
+  color: $yellow;
+  margin: $smallMargin;
+}
+
+.silver {
+  color: silver;
+}

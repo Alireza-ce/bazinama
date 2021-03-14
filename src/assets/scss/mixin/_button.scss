@@ -1,0 +1,15 @@
+@mixin button($hasBackground: false) {
+  background: inherit;
+  border: solid 1.5px #ffcb05;
+  padding: 8px;
+  cursor: pointer;
+  @if $hasBackground {
+    box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(
+        261deg,
+        rgba(255, 0, 0, 0) 100%,
+        rgba(255, 138, 0, 0.5) 17%
+      ),
+      linear-gradient(to bottom, #ffcb05, #ffcb05);
+  }
+}

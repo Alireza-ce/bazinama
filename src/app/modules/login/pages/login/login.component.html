@@ -1,0 +1,31 @@
+<div class="login">
+  <div *ngIf="login">
+    <p class="loginTitle">ورود / ثبت نام به بازی نما</p>
+    <form class="loginForm" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <label class="loginLabel">شماره تماس</label>
+      <input
+        class="loginInput"
+        formControlName="mobile"
+        placeholder=".........09"
+      />
+      <button class="loginButton">دریافت کد فعال سازی</button>
+    </form>
+  </div>
+
+  <div *ngIf="acceptPhone">
+    <p class="loginTitle">ورود / ثبت نام به بازی نما</p>
+    <form
+      class="loginForm"
+      [formGroup]="acceptForm"
+      (ngSubmit)="onAcceptSubmit()"
+    >
+      <label class="loginLabel">کد فعال سازی</label>
+      <input
+        class="loginInput"
+        formControlName="verification_code"
+        placeholder="*****"
+      />
+      <button class="loginButton">ارسال</button>
+    </form>
+  </div>
+</div>

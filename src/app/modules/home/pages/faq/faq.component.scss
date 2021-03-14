@@ -1,0 +1,65 @@
+@import "mixin/flex";
+@import "mixin/font";
+@import "variables/marginPadding";
+@import "variables/marginPadding";
+@import "variables/font";
+
+.header {
+  margin: $mediumMargin $extraLargeMargin;
+  @media screen and (max-width: $screen-mobile) {
+    margin: $baseMargin $mediumMargin;
+  }
+}
+
+.title {
+  @include title;
+  @media screen and (max-width: $screen-mobile) {
+    @include title($mediumSize);
+  }
+}
+
+.supporting {
+  margin-top: $mediumMargin;
+}
+.description {
+  margin-top: $baseMargin;
+  @include regular;
+  color: $grayText;
+}
+
+.support {
+  background: $textColor;
+  padding: $mediumMargin $extraLargeMargin;
+  box-shadow: 0px 2px 5px rgba($color: #03060f, $alpha: 1) inset;
+  @media screen and (max-width: $screen-mobile) {
+    padding: $mediumMargin;
+  }
+}
+
+.titleDeveloper {
+  color: $faqTextColor;
+}
+
+.desDeveloper {
+  color: $faqTextColor;
+}
+
+.moreInfo {
+  margin-top: $mediumMargin;
+  margin-right: $largeMargin;
+  @media screen and (max-width: $screen-mobile) {
+    margin-top: $baseMargin;
+    margin-right: $mediumMargin;
+  }
+}
+
+.moreInfoTitle {
+  @include title($baseSize);
+  color: $faqTextColor;
+}
+
+.moreInfoDes {
+  @include regular;
+  margin-top: 8px;
+  color: #212121;
+}

@@ -1,0 +1,34 @@
+<header class="header" #header>
+  <a [routerLink]="['/']">
+    <img src="assets/images/icon_logo.png" alt="bazinama" class="logo"
+  /></a>
+  <div class="menu">
+    <nav class="navDesktop">
+      <a [routerLink]="['/project']"> همه پروژه ها </a>
+      <a [routerLink]="['/faq']"> سوالات متداول </a>
+      <a> روند حمایت </a>
+      <a (click)="login()" *ngIf="!isLoggedIn"> ورود / ثبت نام </a>
+      <div *ngIf="isLoggedIn" class="image">
+        <img
+          class="avatar"
+          (click)="showProfileDetail()"
+          src="assets/images/avatar.png"
+        />
+        <div *ngIf="profileToggle" class="profile">
+          <p class="nickName">{{ nickName }}</p>
+          <p class="userProfile" [routerLink]="['/profile']">پروفایل</p>
+          <p class="logout" (click)="logout()">خروج</p>
+        </div>
+      </div>
+    </nav>
+    <nav class="navMobile" *ngIf="isShowNav">
+      <a [routerLink]="['/project']"> همه پروژه ها </a>
+      <a [routerLink]="['/faq']"> سوالات متداول </a>
+      <a> روند حمایت </a>
+      <a (click)="login()" *ngIf="!isLoggedIn"> ورود / ثبت نام </a>
+      <a *ngIf="isLoggedIn" [routerLink]="['/profile']"> پروفایل </a>
+    </nav>
+    <p class="gameRegister">بازی خود را ثبت کنید</p>
+    <span class="menuBar" (click)="showNav()"></span>
+  </div>
+</header>

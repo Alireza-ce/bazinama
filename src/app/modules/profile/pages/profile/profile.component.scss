@@ -1,0 +1,70 @@
+@import "mixin/form";
+@import "mixin/button";
+@import "mixin/font";
+@import "variables/marginPadding";
+@import "variables/colors";
+@import "variables/border";
+@import "variables/screen";
+@import "variables/font";
+
+.profile {
+  padding: $largePadding;
+  @media screen and (max-width: $screen-mobile) {
+    padding: $mediumPadding;
+  }
+}
+
+.title {
+  @include title;
+  @media screen and (max-width: $screen-mobile) {
+    @include title($mediumSize);
+  }
+}
+.changeAvatar {
+  display: flex;
+  margin-top: $mediumMargin;
+}
+.changeAvatar img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+form {
+  @include form;
+  max-width: 150px;
+  margin: $baseMargin $mediumMargin;
+  @media screen and (max-width: $screen-mobile) {
+    max-width: 100px;
+    margin: $baseMargin;
+  }
+}
+
+input {
+  @include input;
+  margin-top: $baseMargin;
+}
+
+label {
+  @include regular;
+  color: $yellow;
+  margin-top: $mediumMargin;
+  @media screen and (max-width: $screen-mobile) {
+    margin-top: $baseMargin;
+  }
+}
+
+.submit {
+  @include button(true);
+  @include buttonFont;
+  color: $buttonTextColor;
+  padding: $basePadding;
+  margin-top: $mediumMargin;
+}
+
+.changeProfile {
+  height: 90%;
+  @include button;
+  @include buttonFont;
+  margin: $baseMargin;
+}

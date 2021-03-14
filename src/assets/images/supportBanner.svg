@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="296px" height="474px" viewBox="0 0 296 474" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 59.1 (101010) - https://sketch.com -->
+    <title>F8724245-0E9C-47F2-9E4E-F52DA4574679</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="34.4310877%" y1="17.2836181%" x2="73.7962666%" y2="40.9551949%" id="linearGradient-1">
+            <stop stop-color="#FF0000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FF8A00" stop-opacity="0.5" offset="100%"></stop>
+        </linearGradient>
+        <path d="M1341,438 L1341,506 L1273,506 L1273,438 L1341,438 Z M1493,387 L1493,489 L1391,489 L1391,387 L1493,387 Z M1475,330 L1475,367 L1438,367 L1438,330 L1475,330 Z M1573,204 L1573,279 L1498,279 L1498,204 L1573,204 Z M1406,255 L1406,274 L1387,274 L1387,255 L1406,255 Z M1438,204 L1438,217 L1425,217 L1425,204 L1438,204 Z M1412,130 L1412,161 L1381,161 L1381,130 L1412,130 Z M1255,136 L1255,145 L1246,145 L1246,136 L1255,136 Z M1341,125 L1341,141 L1325,141 L1325,125 L1341,125 Z M1509,32 L1509,116 L1425,116 L1425,32 L1509,32 Z M1307,82 L1307,95 L1294,95 L1294,82 L1307,82 Z" id="path-2"></path>
+    </defs>
+    <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="D.00.00-Homepage" transform="translate(-1304.000000, -3264.000000)">
+            <g id="Section-4" transform="translate(58.000000, 3232.000000)">
+                <g id="Shapes-right">
+                    <use fill="#FFCB05" xlink:href="#path-2"></use>
+                    <use fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

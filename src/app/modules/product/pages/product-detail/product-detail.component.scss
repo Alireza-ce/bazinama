@@ -1,0 +1,142 @@
+@import "mixin/flex";
+@import "mixin/font";
+@import "mixin/grid";
+@import "variables/marginPadding";
+@import "variables/colors";
+@import "mixin/button";
+
+.productDetail {
+  width: 80%;
+  margin: $mediumMargin auto;
+  @media screen and (max-width: $screen-mobile) {
+    width: 90%;
+  
+  }
+}
+
+.title {
+  @include title;
+}
+
+.description {
+  @include regular;
+  color: $grayText;
+}
+
+.productRow {
+  @include twoColumn;
+  margin-top: $mediumMargin;
+}
+
+.productImage {
+  position: relative;
+}
+
+.productImage img {
+  width: 100%;
+  height: auto;
+}
+
+.minPrice,
+.type,
+.person {
+  @include regular;
+  color: $grayText;
+}
+
+.supporting,
+.collected {
+  @include regular;
+}
+
+.price,
+.supportNumber {
+  margin: 0px;
+  @include regular($mediumSize);
+}
+
+.support {
+  margin: $baseMargin 0px;
+}
+
+.supportBtn,
+.downloadBtn {
+  width: 100%;
+  @include button(true);
+  @include buttonFont;
+  color: $buttonTextColor;
+}
+
+.fa-heart {
+  color: $heartColor;
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: $baseMargin;
+}
+
+.share {
+  width: 100%;
+  @include button;
+  @include buttonFont;
+  margin-right: $smallMargin;
+}
+
+.downloadBtn{
+    margin-left: $smallMargin;
+}
+
+.fa{
+    margin-left: $smallMargin;
+}
+
+.comments{
+  padding: $largePadding;
+  @media screen and (max-width: $screen-mobile) {
+    padding: $smallPadding;
+  
+  }
+}
+
+.commentTitle{
+  @include title($mediumSize);
+}
+
+.comment{
+  margin: $baseMargin;
+}
+
+.progress {
+  height: 16px;
+  background: $grayText;
+  margin-bottom: $mediumMargin;
+}
+
+.progress .progressBar {
+  position: relative;
+  display: inline-block;
+  height: 16px;
+  background: $yellow;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 16px solid $yellow;
+    
+  }
+}
+
+.percentNumber{
+  position: absolute;
+  left: -12px;
+top: 20px;
+@include regular;
+}

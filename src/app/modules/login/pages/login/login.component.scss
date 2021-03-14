@@ -1,0 +1,44 @@
+@import 'variables/colors';
+@import 'mixin/font';
+@import 'mixin/form';
+@import 'mixin/button';
+@import 'variables/font';
+@import 'variables/marginPadding';
+
+.mat-dialog-container{
+    background:$cardBackground;
+}
+
+.cdk-overlay-container{
+    background: linear-gradient(#231f43, #03060f);
+    z-index: 2010;
+}
+
+.login{
+    padding: $basePadding;
+}
+
+.loginTitle{
+    @include title($mediumSize)
+}
+
+.loginForm{
+    @include form;
+}
+.loginInput{
+    @include input;
+}
+
+.loginButton{
+    @include button(true);
+    @include buttonFont;
+    color: $buttonTextColor;
+  padding: $basePadding;
+  margin-top: $mediumMargin;
+}
+
+
+.loginLabel{
+    @include regular;
+    color: $yellow;
+}

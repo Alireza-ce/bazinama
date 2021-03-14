@@ -1,0 +1,123 @@
+@import "variables/marginPadding";
+@import "variables/colors";
+@import "variables/border";
+@import "variables/screen";
+@import "variables/font";
+@import "mixin/font";
+@import "mixin/button";
+
+.header {
+  width: 100%;
+  background: $backgroundColor;
+  display: flex;
+  justify-content: space-between;
+  padding: $basePadding;
+  position: sticky;
+  top: 0;
+  z-index: 1009;
+}
+
+.headerShadow{
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.38), 0 4px 6px 0 rgba(0, 0, 0, 0.12);
+}
+
+.navDesktop {
+  @media screen and (max-width: $screen-desktop) {
+    display: none;
+  }
+}
+
+.header nav a {
+  display: inline-block;
+  @include regular($smallSize);
+  padding: $basePadding;
+  cursor: pointer;
+  text-decoration-line: none;
+}
+
+.logo {
+  height: 42px;
+  margin-right: $mediumMargin;
+  @media screen and (max-width: $screen-desktop) {
+    height: 32px;
+    margin-right: $baseMargin;
+  }
+}
+
+.gameRegister {
+  display: inline-block;
+  @include button;
+  @include buttonFont($smallSize);
+  padding: $basePadding;
+  @media screen and (max-width: $screen-desktop) {
+    padding: $smallPadding;
+  }
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.image {
+  position: relative;
+  display: inline-block;
+  padding: 0px $basePadding;
+  cursor: pointer;
+}
+
+.profile {
+  position: absolute;
+  min-width: 200px;
+  min-height: 100px;
+  left: 0;
+  top: 48px;
+  background: $cardBackground;
+  border-radius: $smallRadius;
+  padding: $basePadding $mediumPadding;
+  box-shadow: 0px 1px 50px 0px #000000;
+}
+
+.logout,
+.userProfile,
+.nickName {
+  @include regular;
+}
+.nickName {
+  color: $yellow;
+}
+
+.menu {
+  display: flex;
+}
+
+.menuBar {
+  width: 18px;
+  height: 18px;
+  border-left: 4px solid $tabContentBackground;
+  border-bottom: 4px solid $tabContentBackground;
+  transform: rotate(-45deg);
+  display: none;
+  cursor: pointer;
+  @media screen and (max-width: $screen-desktop) {
+    display: block;
+    margin: 0px $baseMargin;
+  }
+}
+
+.navMobile {
+  position: absolute;
+  top: 48px;
+  left: 24px;
+  padding: $basePadding;
+  display: flex;
+  flex-direction: column;
+  background: $cardBackground;
+  border-radius: $smallRadius;
+  box-shadow: 4px 3px 4px rgba(0, 0, 20, 0.5);
+  @media screen and (min-width: $screen-desktop) {
+    display: none;
+  }
+}

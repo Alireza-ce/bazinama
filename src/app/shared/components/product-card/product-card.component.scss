@@ -1,0 +1,86 @@
+@import "mixin/font";
+@import "variables/colors";
+@import "variables/font";
+@import "variables/marginPadding";
+
+.productCard {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.38), 0 4px 6px 0 rgba(0, 0, 0, 0.12);
+  background-color: $cardBackground;
+  cursor: pointer;
+  margin-top: $baseMargin;
+}
+
+.imageBlock {
+  position: relative;
+}
+
+.image {
+  width: 100%;
+}
+
+.like {
+  position: absolute;
+  bottom: 2px;
+  right: 0px;
+  background: $yellow;
+  @include regular;
+  padding: $smallPadding $basePadding;
+}
+
+.fa-heart {
+  color: $heartColor;
+}
+
+.productName {
+  margin: $baseMargin;
+}
+
+hr {
+  margin: $baseMargin;
+  border: solid 0.5px rgba(255, 255, 255, 0.5);
+}
+
+.productInfo {
+  display: flex;
+  justify-content: space-between;
+  padding: $basePadding;
+}
+
+.supported {
+  text-align: left;
+}
+
+.info{
+  padding: 0px $basePadding;
+}
+
+.productName{
+  @include title($mediumSize)
+}
+
+.description,.donated{
+  @include regular;
+  color:$grayText
+}
+
+.price , .percent{
+  margin: 0px;
+   @include regular;
+}
+
+.type{
+  @include regular($smallSize);
+  color:$grayText 
+}
+
+.progress{
+  height: 16px;
+  background: $grayText;
+  margin: $baseMargin;
+}
+
+.progress span{
+  display: inline-block;
+  height: 16px;
+  background: $yellow;
+}

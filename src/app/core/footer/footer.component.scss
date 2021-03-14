@@ -1,0 +1,85 @@
+@import "variables/marginPadding";
+@import "variables/colors";
+@import "variables/font";
+@import "mixin/font";
+
+.container {
+  padding: 0px $basePadding;
+}
+
+hr {
+  color: $footerColorLine;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: $mediumPadding;
+  @media screen and (max-width: $screen-mobile) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+}
+
+.bazinamaLinks,
+.aboutUsLinks {
+  padding-right: $largePadding;
+  @media screen and (max-width: $screen-mobile) {
+    padding: 0px $basePadding
+  }
+}
+
+.links a {
+  display: block;
+  @include regular($baseSize);
+  text-align: right;
+  color: $footerColorLinks;
+}
+
+.logo {
+  margin-left: $largeMargin;
+  @media screen and (max-width: $screen-mobile) {
+    margin: $mediumMargin;
+  }
+}
+
+.logo a {
+  display: block;
+  text-align: center;
+}
+
+.logo a img {
+  text-align: center;
+  margin: auto;
+  height: 42px;
+}
+
+.socialMedia {
+  display: flex;
+  @media screen and (max-width: $screen-mobile) {
+   justify-content: center;
+  }
+}
+
+.socialMedia img {
+  width: 30px;
+  height: 30px;
+  margin: $baseMargin;
+  cursor: pointer;
+}
+
+.yaraGroup {
+  margin: $baseMargin;
+  float: left;
+  @include regular($smallSize);
+  color: $footerColorLinks;
+}
+
+.fa-heart {
+  color: $heartColor;
+}

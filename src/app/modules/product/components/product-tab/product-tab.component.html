@@ -1,0 +1,83 @@
+<mat-tab-group mat-align-tabs="start" color="primary" class="tab">
+  <mat-tab label="اطلاعات بازی">
+    <div class="gameInfo">
+      <div class="productDescription" [innerHtml]="product.description"></div>
+      <div class="productDescription">
+        <p class="userScore">امتیاز کاربران</p>
+        <div class="score">
+          <div class="circle">
+            <div *ngFor="let poll of product.polls">
+              <circle-progress
+                [percent]="16 * poll.value_public"
+                [title]="poll.value_public | number: '1.1-1'"
+              >
+              </circle-progress>
+              <p>{{ poll.attribute }}</p>
+            </div>
+          </div>
+          <button class="commentBtn">دادن نظر و امتیاز به بازی</button>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="تصاویر و ویدئو">
+    <div class="gallery">
+      <app-image
+        *ngFor="let productPoster of product.promotionalContainers"
+        [src]="productPoster"
+      ></app-image>
+    </div>
+  </mat-tab>
+  <mat-tab label="تیم سازنده">
+    <div class="creator">
+      <div class="ourTeam">
+        <p class="teamTitle">تیم ما</p>
+        <div class="teamRow">
+          <div
+            class="participation"
+            *ngFor="let product_staff of product.product_staff"
+          >
+            <div class="userImage">
+              <img class="avatar" [src]="product_staff.app_user.avatar" />
+            </div>
+            <div class="userInfo">
+              <p class="userName">{{ product_staff.app_user.nickname }}</p>
+              <p class="job">{{ product_staff.title }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contactUs">
+        <p class="teamTitle">ارتباط با ما</p>
+        <p *ngIf="product.support.website">
+          <i class="fa fa-globe" aria-hidden="true"> </i>
+          <a class="socialLink" [href]="product.support.website">
+            {{ product.support.website }}</a
+          >
+        </p>
+        <p *ngIf="product.support.email">
+          <i class="fa fa-envelope-o" aria-hidden="true"> </i>
+          <a class="socialLink" [href]="product.support.email">
+            {{ product.support.email }}</a
+          >
+        </p>
+        <p *ngIf="product.support.tel">
+          <i class="fa fa-phone" aria-hidden="true"> </i>
+          {{ product.support.tel }}
+        </p>
+        <div class="socialMediaTab">
+          <p class="teamTitle">شبکه‌های اجتماعی</p>
+          <a href="https://www.instagram.com/bazinama/"
+            ><img src="assets/images/instagram.svg" class="socialMediaIcon"
+          /></a>
+          <a [href]="product.support.telegram"
+            ><img src="assets/images/telegram.svg" class="socialMediaIcon"
+          /></a>
+          <a [href]="product.support.linkedin"
+            ><img src="assets/images/linkedin.svg" class="socialMediaIcon"
+          /></a>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>

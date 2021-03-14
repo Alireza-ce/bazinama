@@ -1,0 +1,16 @@
+<div class="productList">
+  <div class="games centerVertical">
+    <p class="gamesTitle">حامی مالی بازی‌ها باشید!</p>
+    <p class="gamesText">
+      در بین بازی‌ها ایده ناب یا بازی با پتانسیلی دیدید؟ با پرداخت مبلغی هرچند
+      کوچک از آن حمایت مالی کنید.
+    </p>
+    <product-banner [product]="banner" *ngIf="banner"></product-banner>
+    <div class="cardsGroup">
+      <product-card
+        *ngFor="let product of productList"
+        [product]="product"
+      ></product-card>
+    </div>
+  </div>
+</div>

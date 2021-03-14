@@ -1,0 +1,37 @@
+@import "variables/font";
+@import "variables/colors";
+@import "variables/font";
+
+@mixin title($size: $titleSize, $weight: bold) {
+  font-family: $title;
+  font-size: $size;
+  font-weight: $weight;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: $textColor;
+}
+
+@mixin regular($size: $baseSize, $weight: 300, $color: $textColor) {
+  font-family: $regular;
+  font-size: $size;
+  font-weight: $weight;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  color: $color;
+}
+
+@mixin buttonFont($size: $baseSize) {
+  font-family: $regular;
+  font-size: $size;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffcb05;
+}

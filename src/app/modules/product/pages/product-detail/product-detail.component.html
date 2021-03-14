@@ -1,0 +1,52 @@
+<div *ngIf="product">
+  <div class="productDetail">
+    <p class="title">{{ product.name }}</p>
+    <p class="description">{{ product.short_description }}</p>
+    <div class="productRow">
+      <div class="productImage">
+        <img [src]="imageSrc" />
+      </div>
+      <div class="ProductInfo">
+        <div class="progress">
+          <span class="progressBar" [ngStyle]="{'width':product.invest_goal.achievement_percent | convertToPercent}">
+            <span class="percentNumber">{{product.invest_goal.achievement_percent | number: '1.0-0'}}%</span>
+          </span>
+        </div>
+        <div class="donate">
+          <p class="minPrice">از {{ product.invest_goal.amount }}</p>
+          <p class="price">
+            {{ product.invest_goal.achieved }} <span class="type">تومان</span>
+          </p>
+          <p class="collected">جمع آوری شده</p>
+        </div>
+        <div class="support">
+          <p class="supportNumber">
+            {{ product.invest_goal.participation }}
+            <span class="person">نفر</span>
+          </p>
+          <p class="supporting">حمایت کننده</p>
+        </div>
+        <button class="supportBtn">
+          <i class="fa fa-heart" aria-hidden="true"> </i> حمایت از این بازی
+        </button>
+        <div class="btnGroup">
+          <button class="downloadBtn">
+            <i class="fa fa-download" aria-hidden="true"> </i> دانلود بازی
+          </button>
+          <button class="share">
+            <i class="fa fa-share-alt" aria-hidden="true"> </i> اشتراک
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <product-tab [product]="product"></product-tab>
+  <div class="comments">
+    <p class="commentTitle">نظر بازینمایی‌ها</p>
+    <app-comment
+      *ngFor="let comment of comments"
+      [comment]="comment"
+      class="comment"
+    ></app-comment>
+  </div>
+</div>

@@ -1,0 +1,166 @@
+@import "variables/colors";
+@import "variables/border";
+@import "variables/font";
+@import "variables/marginPadding";
+@import "mixin/font";
+@import "mixin/grid";
+
+mat-tab-header {
+  background-color: $tabBackground;
+  position: sticky !important;
+  top: 0;
+  z-index: 20000;
+}
+
+.mat-tab-labels {
+  padding: $basePadding $largePadding;
+  @media screen and (max-width: $screen-mobile) {
+    padding: $basePadding;
+  }
+}
+
+.mat-tab-label {
+  @include title($baseSize);
+  color: $yellow;
+  margin: $baseMargin;
+  @media screen and (max-width: $screen-mobile) {
+    margin: 0px;
+  }
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: $yellow;
+}
+
+.mat-tab-body-wrapper {
+  background-color: $tabContentBackground;
+}
+
+.mat-tab-body-content {
+  margin: 0px $largeMargin;
+  @media screen and (max-width: $screen-mobile) {
+    margin: 0px $baseMargin;
+  }
+}
+
+.gameInfo {
+  @include twoColumn;
+  margin: $mediumMargin;
+}
+
+.productDescription {
+  @include regular;
+  color: $faqTextColor;
+}
+
+.gallery {
+  display: flex;
+  margin: $baseMargin $mediumMargin;
+  @media screen and (max-width: $screen-mobile) {
+    margin: $baseMargin;
+    flex-direction: column;
+  }
+}
+
+.teamRow,
+.creator {
+  @include twoColumn;
+}
+.creator {
+  margin: $baseMargin $mediumMargin;
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+}
+
+.teamTitle {
+  @include title($mediumSize);
+  color: $faqTextColor;
+}
+
+.participation {
+  display: flex;
+}
+
+.userInfo {
+  margin-right: $baseMargin;
+}
+
+.userName,
+.job {
+  @include regular;
+  padding: 0px;
+  margin: 0px;
+}
+
+.job {
+  color: $footerColorLinks;
+}
+
+.userName {
+  color: $faqTextColor;
+}
+
+.fa-globe,
+.fa-envelope-o,
+.fa-phone {
+  font-size: $mediumSize;
+  margin-left: $baseMargin;
+  color: $tabBackground;
+}
+
+.socialLink {
+  color: $linkColor;
+  text-decoration: none;
+  border-bottom: 1px solid $linkColor;
+}
+
+.socialMediaTab {
+  margin-top: $mediumMargin;
+}
+
+.socialMediaIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: $smallRadius;
+  margin: $smallMargin;
+}
+
+.userScore {
+  @include title($baseSize);
+  color: $faqTextColor;
+}
+
+.score {
+  border-radius: $smallRadius;
+  background: $grayText;
+  text-align: center;
+}
+
+.circle {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: $baseMargin;
+  justify-content: center;
+}
+
+
+.circle p {
+  text-align: center;
+  @include regular;
+  color: $faqTextColor;
+}
+
+.commentBtn {
+  border: solid 1.5px $footerColorLine;
+  padding: $basePadding;
+  text-align: center;
+  margin: $baseMargin;
+  @include buttonFont;
+  color: $footerColorLine;
+  background: inherit;
+}

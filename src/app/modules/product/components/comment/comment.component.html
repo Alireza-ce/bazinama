@@ -1,0 +1,19 @@
+<div class="comment">
+  <div class="userInfo">
+    <div class="userImage">
+      <img [src]="imageSrc" class="userAvatar" />
+      <p class="userName">{{ comment.user }}</p>
+    </div>
+    <div class="rate">
+      <i
+        *ngFor="let gold of silverStar"
+        class="fa fa-star silver"
+        aria-hidden="true"
+      >
+      </i>
+      <i *ngFor="let gold of goldStar" class="fa fa-star" aria-hidden="true">
+      </i>
+    </div>
+  </div>
+  <p class="message">{{ comment.comment_text }}</p>
+</div>

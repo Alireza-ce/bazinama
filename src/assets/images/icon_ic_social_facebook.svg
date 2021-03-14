@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_facebook@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="D.00.00-Homepage" transform="translate(-219.000000, -4040.000000)">
+            <g id="Footer" transform="translate(0.000000, 3895.000000)">
+                <g id="Column-3" transform="translate(155.000000, 49.000000)">
+                    <g id="Social-Icons" transform="translate(0.000000, 96.000000)">
+                        <g id="icon_ic_social_facebook" transform="translate(64.000000, 0.000000)">
+                            <g id="Facebook" transform="translate(20.000000, 20.000000) rotate(-0.000000) translate(-20.000000, -20.000000) ">
+                                <path d="M0,9.99050677 L0,30.0094932 C0,35.5279241 4.47290224,40 9.99050677,40 L30.0094932,40 C35.5279241,40 40,35.5270978 40,30.0094932 L40,9.99050677 C40,4.47207592 35.5270978,0 30.0094932,0 L9.99050677,0 C4.47207592,0 0,4.47290224 0,9.99050677 Z" id="Rectangle" fill="#3C5A99"></path>
+                                <path d="M28.0345444,40 L28.0345444,24.9471012 L33.0466283,24.9471012 L33.7971168,19.0807194 L28.0345444,19.0807194 L28.0345444,15.3354053 C28.0345444,13.6369524 28.5024027,12.4795128 30.9184489,12.4795128 L34,12.4781554 L34,7.23121644 C33.4670574,7.15972486 31.6378166,7 29.5096372,7 C25.0667036,7 22.0249512,9.73387417 22.0249512,14.7544231 L22.0249512,19.0807194 L17,19.0807194 L17,24.9471012 L22.0249512,24.9471012 L22.0249512,40 L28.0345444,40 L28.0345444,40 Z" id="f" fill="#FFFFFF"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

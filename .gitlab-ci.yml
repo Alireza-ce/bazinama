@@ -1,0 +1,38 @@
+image: trion/ng-cli-karma
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - apt-get update -qy
+  - apt-get install -y lftp
+
+deploy_production:
+  stage: deploy
+  environment: Production
+  tags:
+    - web
+  only:
+    - master
+  script:
+    - rm -rf node_modules
+    - rm ./package-lock.json
+    - npm install
+    - ./node_modules/@angular/cli/bin/ng build --progress false --prod
+    - ls
+    - lftp -c "set ftp:ssl-allow no; open -u $FTP_USERNAME,$FTP_PASSWORD ftp.alireza-ce.ir; mirror -Rev dist/bazinama/ ./alireza  --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/"
+
+deploy_test:
+  stage: deploy
+  environment: Production
+  tags:
+    - panel
+  only:
+    - /^test-.*/
+  script:
+    - rm ./package-lock.json
+    - npm install
+    - ./node_modules/@angular/cli/bin/ng add ngx-deploy-npm
+    - ./node_modules/@angular/cli/bin/ng build --progress false
+    - lftp -c "set ftp:ssl-allow no; open -u $FTP_USERNAME,$FTP_PASSWORD ftp.alireza-ce.ir; mirror -Rev dist/ ./alireza  --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/"

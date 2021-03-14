@@ -1,0 +1,81 @@
+<div class="home">
+  <img
+    src="assets/images/shapesBackground.svg"
+    alt="shape"
+    class="shapeBackground"
+  />
+  <div class="supportUs">
+    <p class="title">حمایت از بازی‌های ایرانی</p>
+    <p class="text textRight">
+      استارتر، جامعه حمایت از بازی‌های ایرانی و بازی‌سازی ملی است. گیمرها،
+      شرکت‌ها و تیم‌های بازی‌سازی معتبر، از طریق این پلتفرم، به حمایت مالی از
+      بازی‌ها و تیم های جوان بازی ساز ایرانی می پردازند، نظرات و امتیازات خود را
+      برای هر بازی ثبت می کنند، به بازی‌سازان بازخور مثبت یا منفی می‌دهند و از
+      این طریق در جهت رشد و توسعه جامعه بازی سازی ایرانی گام بر می دارند.<br />
+      در هر سطح از توسعه بازی (از ایده تا تجاری سازی)، استارتر حامی بازی‌سازان و
+      دریچه‌ای برای ورود به دنیای بازی‌سازان حرفه ای است.
+    </p>
+  </div>
+  <div class="games centerVertical">
+    <p class="title textCenter">حامی مالی بازی‌ها باشید!</p>
+    <p class="description">
+      در بین بازی‌ها ایده ناب یا بازی با پتانسیلی دیدید؟ با پرداخت مبلغی هرچند
+      کوچک از آن حمایت مالی کنید.
+    </p>
+    <div class="cardsGroup gamesCard">
+      <product-card
+        *ngFor="let product of productList"
+        [product]="product"
+      ></product-card>
+    </div>
+    <div class="boxBtn">
+      <button class="gamesButton" [routerLink]="['/project']">
+        مشاهده همه بازی‌ها
+      </button>
+    </div>
+  </div>
+  <div class="howWork centerVertical">
+    <p class="title">استارتر چطور کار می‌کند؟!</p>
+    <div class="cardsGroup">
+      <div class="card centerVertical">
+        <img src="assets/images/create.svg" />
+        <p class="smallTitle">بسازید</p>
+        <p class="description">
+          در هر مرحله ای از ساخت بازی که هست، حتی اگر فقط ایده ای جذاب برای بازی
+          سازی دارید، پروژه خود را در استارتر، استارت بزنید.
+        </p>
+      </div>
+      <div class="card centerVertical">
+        <img src="assets/images/price.svg" />
+        <p class="smallTitle">تامین مالی کنید</p>
+        <p class="description">
+          در هر مرحله ای از ساخت بازی که هست، حتی اگر فقط ایده ای جذاب برای بازی
+          سازی دارید، پروژه خود را در استارتر، استارت بزنید.
+        </p>
+      </div>
+      <div class="card centerVertical">
+        <img src="assets/images/launch.svg" />
+        <p class="smallTitle">لانچ کنید</p>
+        <p class="description">
+          در هر مرحله ای از ساخت بازی که هست، حتی اگر فقط ایده ای جذاب برای بازی
+          سازی دارید، پروژه خود را در استارتر، استارت بزنید.
+        </p>
+      </div>
+    </div>
+    <div class="boxBtn">
+      <button class="supportBtn">مشاهده روند حمایتی</button>
+    </div>
+  </div>
+
+  <div class="supportGame">
+    <div class="supportContainer centerVertical">
+      <img src="assets/images/supportBanner.svg" class="rightBanner" />
+      <img src="assets/images/supportBanner2.svg" class="leftBanner" />
+      <p class="title textCenter">در حمایت از بازی‌ها شریک شوید</p>
+      <div class="btnGroup">
+        <button class="supportGameBtn">حمایت از بازی‌ها</button>
+        <button class="submitGame">ثبت بازی جدید</button>
+      </div>
+    </div>
+  </div>
+</div>

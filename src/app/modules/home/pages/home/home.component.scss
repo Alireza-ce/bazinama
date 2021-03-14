@@ -1,0 +1,188 @@
+@import "mixin/flex";
+@import "mixin/font";
+@import "mixin/button";
+@import "variables/marginPadding";
+@import "variables/colors";
+@import "variables/font";
+@import "variables/screen";
+@import "mixin/grid";
+
+.home {
+  position: relative;
+  padding-top: $basePadding;
+  @media screen and (max-width: $screen-mobile) {
+    padding-top: $smallPadding;
+  }
+}
+
+.supportUs {
+  margin: $largeMargin;
+  margin-top: 0px;
+  background-color: $cardBackground;
+  @media screen and (max-width: $screen-mobile) {
+    margin: $mediumMargin;
+  }
+}
+
+.centerVertical {
+  @include verticalCenter;
+}
+
+.howWork {
+  margin: $largeMargin 0px;
+}
+
+.cardsGroup {
+  width: 100%;
+  @include threeColumn;
+}
+
+.title {
+  padding: $mediumPadding;
+  padding-bottom: $basePadding;
+  text-align: right;
+  @include title;
+  @media screen and (max-width: $screen-mobile) {
+    @include title($mediumSize);
+  }
+}
+
+.text {
+  @include regular;
+  padding: $mediumPadding;
+  padding-top: 0px;
+  width: 60%;
+  text-align: right;
+  @media screen and (max-width: $screen-mobile) {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+.description {
+  @include regular($color: $grayText);
+  text-align: center;
+}
+
+.shapeBackground {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  width: 303.5px;
+  object-fit: contain;
+  @media screen and (max-width: $screen-mobile) {
+    width: 200px;
+  }
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.supportBtn {
+  width: 40%;
+  @include button;
+  @include buttonFont;
+  margin: $largeMargin auto;
+  margin-bottom: 0px;
+  @media screen and (max-width: $screen-mobile) {
+    width: 100%;
+    margin: $baseMargin auto;
+  }
+}
+
+.supportGame {
+  margin-bottom: $largeMargin;
+}
+
+.supportContainer {
+  position: relative;
+  background-color: $cardBackground;
+  margin: $mediumMargin;
+  padding: $mediumPadding 0px;
+}
+
+.smallTitle {
+  @include title($mediumSize);
+  padding: $basePadding 0px;
+}
+
+.btnGroup {
+  @include twoColumn;
+  width: 60%;
+  margin: auto;
+  @media screen and (max-width: $screen-mobile) {
+    width: 90%;
+    margin: $baseMargin auto;
+  }
+}
+
+.supportGameBtn {
+  @include button(true);
+  @include buttonFont;
+  color: $buttonTextColor;
+  padding: $basePadding;
+  margin: 0px $baseMargin;
+  width: 100%;
+  @media screen and (max-width: $screen-mobile) {
+    width: 100%;
+    margin: $baseMargin auto;
+  }
+}
+
+.submitGame {
+  @include button;
+  @include buttonFont;
+  padding: $basePadding;
+  margin: 0px $baseMargin;
+  width: 100%;
+  @media screen and (max-width: $screen-mobile) {
+    width: 100%;
+    margin: $baseMargin auto;
+  }
+}
+
+.rightBanner {
+  position: absolute;
+  bottom: 0px;
+  right: -32px;
+  height: 100%;
+  @media screen and (max-width: $screen-mobile) {
+    bottom: 0px;
+    height: 50%;
+  }
+}
+.leftBanner {
+  position: absolute;
+  bottom: -12px;
+  left: -12px;
+  width: 128px;
+  @media screen and (max-width: $screen-mobile) {
+    width: 70px;
+  }
+}
+
+.gamesCard {
+  background: url(./../../../../../assets/images/shapeBackgroundGames.svg);
+  background-size: cover;
+}
+
+.gamesButton {
+  @include button(true);
+  @include buttonFont;
+  color: $buttonTextColor;
+  padding: $basePadding;
+  width: 40%;
+  margin: $largeMargin auto;
+  margin-bottom: 0px;
+  @media screen and (max-width: $screen-mobile) {
+    width: 100%;
+    margin: $baseMargin auto;
+  }
+}
+
+.boxBtn {
+  width: 100%;
+  padding: 0px $mediumPadding;
+  text-align: center;
+}

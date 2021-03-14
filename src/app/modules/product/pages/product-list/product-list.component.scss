@@ -1,0 +1,31 @@
+@import "mixin/flex";
+@import "mixin/font";
+@import "mixin/grid";
+@import "variables/marginPadding";
+@import "variables/colors";
+
+.productList {
+  margin: $largeMargin 0px;
+}
+.gamesTitle {
+  @include title;
+  @media screen and (max-width: $screen-mobile) {
+    @include title($mediumSize);
+  }
+}
+
+.gamesText {
+  @include regular;
+  color: $grayText;
+  margin: $baseMargin $mediumMargin;
+  text-align: center;
+}
+
+.centerVertical {
+  @include verticalCenter;
+}
+
+.cardsGroup {
+  width: 100%;
+  @include threeColumn;
+}

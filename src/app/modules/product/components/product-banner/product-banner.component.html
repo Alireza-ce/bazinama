@@ -1,0 +1,34 @@
+<div class="banner" (click)="productDetail(product.id)">
+  <div class="imageBanner">
+    <div class="image">
+      <img [src]="imageSrc" *ngIf="imageSrc" alt="game banner" />
+      <div class="day">پروژه روز</div>
+      <div class="like">
+        <i class="fa fa-heart" aria-hidden="true"> </i>
+        {{ product.invest_goal.participation }}
+        <span class="supporter"> حمایت کننده</span>
+      </div>
+    </div>
+  </div>
+  <div class="product">
+    <p class="productName">{{ product.name }}</p>
+    <p class="description">
+      {{ product.short_description }}
+    </p>
+    <div class="progress">
+      <span class="progressBar" [ngStyle]="{'width':product.invest_goal.achievement_percent | convertToPercent}">
+        <span class="percentNumber">{{product.invest_goal.achievement_percent | number: '1.0-0'}}%</span>
+      </span>
+    </div>
+    <div class="productInfo">
+      <div class="donate">
+        <p class="price">{{ product.invest_goal.achieved }}  <span class="type">تومان </span></p>
+        <p class="donated">جمع‌آوری شده</p>
+      </div>
+      <div class="supported">
+        <p class="percent"> {{ product.invest_goal.achievement_percent }} %</p>
+        <p class="donated">حمایت شده</p>
+      </div>
+    </div>
+  </div>
+</div>

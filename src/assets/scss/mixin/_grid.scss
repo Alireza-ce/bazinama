@@ -1,0 +1,21 @@
+@import "variables/marginPadding";
+
+@mixin threeColumn() {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  padding: $mediumPadding $largePadding;
+  grid-column-gap: $mediumPadding;
+  @media screen and (max-width: $screen-mobile) {
+    grid-template-columns: 100%;
+    padding: $basePadding $mediumPadding;
+  }
+}
+
+@mixin twoColumn() {
+  display: grid;
+  grid-template-columns: 48% 48%;
+  grid-column-gap: $mediumPadding;
+  @media screen and (max-width: $screen-mobile) {
+    grid-template-columns: 100%;
+  }
+}
