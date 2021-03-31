@@ -4,7 +4,7 @@
     alt="shape"
     class="shapeBackground"
   />
-  <div class="supportUs">
+  <div class="supportUs" >
     <p class="title">حمایت از بازی‌های ایرانی</p>
     <p class="text textRight">
       استارتر، جامعه حمایت از بازی‌های ایرانی و بازی‌سازی ملی است. گیمرها،
@@ -22,10 +22,12 @@
       در بین بازی‌ها ایده ناب یا بازی با پتانسیلی دیدید؟ با پرداخت مبلغی هرچند
       کوچک از آن حمایت مالی کنید.
     </p>
-    <div class="cardsGroup gamesCard">
+    <div class="cardsGroup gamesCard" [@flyInOut]="productList.length" >
       <product-card
         *ngFor="let product of productList"
         [product]="product"
+        class="product"
+      
       ></product-card>
     </div>
     <div class="boxBtn">
