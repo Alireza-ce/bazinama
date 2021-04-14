@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  release:'1.1',
   baseUrl:'https://api.vasapi.click',
 };
 

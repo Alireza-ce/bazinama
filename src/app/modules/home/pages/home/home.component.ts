@@ -37,14 +37,22 @@ import { ProductSharedService } from '../../../../shared/services/product-shared
 export class HomeComponent implements OnInit {
   public productList: Product[] = [];
   constructor(private productSharedService: ProductSharedService) {}
-
+  f;
   ngOnInit(): void {
     this.getProduct();
+    throw new RangeError('Parameter must be between 1 and 100');
   }
 
   getProduct() {
     this.productSharedService.getProductList().subscribe((data) => {
       this.productList = data;
     });
+  }
+
+  throwError(){
+    let a = [1 , 2, 3]
+    this.f =a.find(el =>el ==5)
+    this.f[1] = 12;
+    a = this.f[12];
   }
 }

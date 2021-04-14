@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule ,APP_INITIALIZER, ErrorHandler } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
@@ -15,7 +15,16 @@ import { LoginModule } from './modules/login/login.module';
 import { AuthService } from './shared/services/auth.service';
 import { AuthGuard } from './core/guard/auth.guard';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import * as Sentry from "@sentry/angular";
+import { Integrations } from "@sentry/tracing";
+import { Router } from "@angular/router";
+import { environment } from 'src/environments/environment';
 
+Sentry.init({
+  dsn: "https://3bf96cdc71894905b0ac267cc1ed6e18@o569032.ingest.sentry.io/5714478",
+  release: 'bazinama@13',
+  tracesSampleRate: 0.5,
+});
 
 @NgModule({
   declarations: [
@@ -34,6 +43,22 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatProgressSpinnerModule,
   ],
   providers: [
+    {
+      provide: ErrorHandler,
+      useValue: Sentry.createErrorHandler({
+        showDialog: true,
+      }),
+    },
+    {
+      provide: Sentry.TraceService,
+      deps: [Router],
+    },
+    {
+      provide: APP_INITIALIZER,
+      useFactory: () => () => {},
+      deps: [Sentry.TraceService],
+      multi: true,
+    },
     {
       provide: HTTP_INTERCEPTORS,
       useClass: InterceptorService,
